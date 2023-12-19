@@ -5,6 +5,18 @@
  */ 
 public class Triangle {
 	public static void main(String[] args) {
-		// Put your code here	
+		int sideOne, sideTwo, sideThree;
+		// Receive the 3 lengths from the user
+		sideOne = Integer.parseInt(args[0]);
+		sideTwo = Integer.parseInt(args[1]);
+		sideThree = Integer.parseInt(args[2]);
+		boolean sumOne, sumTwo, sumThree, ifFormsTriangle;
+		// Checks the 3 options of sums to test Triangle Inequailty Theorem
+		sumOne = sideOne + sideTwo > sideThree;
+		sumTwo = sideOne + sideThree > sideTwo;
+		sumThree = sideThree + sideTwo > sideOne;
+		ifFormsTriangle = sumOne && sumTwo && sumThree;
+		System.out.println(
+		sideOne + ", " + sideTwo + ", " + sideThree + ": " + ifFormsTriangle);
 	}
 }
